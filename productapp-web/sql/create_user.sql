@@ -1,0 +1,15 @@
+create database product_db;
+use product_db;
+CREATE TABLE users(
+id INT PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+PASSWORD VARCHAR(100) NOT NULL,
+active TINYINT(1) NOT NULL DEFAULT 1,
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+modified_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO users ( NAME,email,PASSWORD) VALUES ('Naresh', 'nareshkumarh@live.com', 'pass123');
+
+SELECT * FROM users;
